@@ -18,7 +18,7 @@
 *****************************************************************************/
 
 //XBSchのドキュメントの管理を行う。
-//#include "stdafx.h"
+#include "stdafx.h"
 //#include <qapplication.h>
 //#include <qwidget.h>
 //#include <SSize.h>
