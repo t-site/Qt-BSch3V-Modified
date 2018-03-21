@@ -12,7 +12,7 @@ INCLUDEPATH += . bsch3com
 DEPENDPATH += . ../BSch3VShared
 INCLUDEPATH += . ../BSch3VShared
 
-unix:LIBS += -L../BSch3VShared-build-desktop/ -lBSch3VShared
+unix:LIBS += -L../BSch3VShared -lBSch3VShared
 
 # Input
 HEADERS += qnutdialog.h \
