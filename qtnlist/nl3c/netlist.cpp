@@ -388,13 +388,13 @@ void SNetList::nameFromLabel()
 			p2 = pWire->p2();
 			if(!fH){
 				if( point.x()!=p1.x() || p1.x()!=p2.x() )continue;
-				if(   point.y() >= p1.y() && point.y() <= p2.y() 
-				   || point.y() <= p1.y() && point.y() >= p2.y() )
+				if( ( point.y() >= p1.y() && point.y() <= p2.y() )
+				   || ( point.y() <= p1.y() && point.y() >= p2.y() ))
 					pWire->m_listSignalName.push_back(signalName);
 			}else{
 				if( point.y()!=p1.y() || p1.y()!=p2.y() )continue;
-				if(   point.x() >= p1.x() && point.x() <= p2.x() 
-				   || point.x() <= p1.x() && point.x() >= p2.x() )
+				if( ( point.x() >= p1.x() && point.x() <= p2.x() )
+				   || ( point.x() <= p1.x() && point.x() >= p2.x() ) )
 					pWire->m_listSignalName.push_back(signalName);
 			}
 

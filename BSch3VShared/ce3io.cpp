@@ -207,7 +207,7 @@ int SWriteCE3::WriteRecord(const char* pBuff)
         m_bNewLine = false;
     }
     while(*pBuff) {
-        if((*pBuff >= '\1')&&( *pBuff <= ' ') || ( *pBuff == '%') || ( *pBuff == ',')) {
+        if( ((*pBuff >= '\1')&&( *pBuff <= ' ')) || ( *pBuff == '%') || ( *pBuff == ',')) {
             char sz[16];
             sprintf(sz,"%02X",*pBuff);
             if(putC('%') == EOF || putC(sz[0]) == EOF || putC(sz[1]) == EOF) return EOF;
