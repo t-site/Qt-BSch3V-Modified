@@ -178,12 +178,6 @@ void SXBSchView::JumpTo(QPoint& jumpto)
     if(jumpto.y()>sheeth) jumpto.setY(sheeth);
 
 
-    int viewportw = width();
-    int viewporth = height();
-    int newContentsX = jumpto.x()*m_viewScaleMul/m_viewScale-viewportw/2;
-    int newContentsY = jumpto.y()*m_viewScaleMul/m_viewScale-viewporth/2;
-    if(newContentsX < 0) newContentsX = 0;
-    if(newContentsY < 0) newContentsY = 0;
     //setContentsPos (newContentsX,newContentsY);
     QPoint pos = SheetToContents(jumpto);
     //pos = contentsToViewport(pos);

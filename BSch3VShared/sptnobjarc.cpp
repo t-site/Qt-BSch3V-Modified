@@ -135,13 +135,9 @@ bool SPtnObjArc::testIntersect(const SPoint& ptest)
 
     double rad = PointRad(m_ptC.x(),m_ptC.y(),r,ptest.x(),ptest.y());
     int deg = (180.0*16*rad)/M_PI+0.5;
-    int nEnd;
     normalizeAngle();
     if(m_nBegin > m_nEnd) {
-        nEnd = m_nEnd+360*16;
         deg += 360*16;
-    } else {
-        nEnd = m_nEnd;
     }
     if(m_nBegin <= deg && deg <= m_nEnd) return true;
     else return false;

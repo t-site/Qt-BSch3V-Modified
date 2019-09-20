@@ -592,7 +592,7 @@ bool ApplicationWindow::saveFile()
 bool ApplicationWindow::saveFileAs()
 {
     QString defaultPath = g_cfg.getSettings()->value("LAST_PATH",QDir::homePath()).toString();
-    QString fn = QFileDialog::getSaveFileName( this,QString::null,defaultPath,"*.ce3");
+    QString fn = QFileDialog::getSaveFileName( this,QString(),defaultPath,"*.ce3");
     if ( !fn.isEmpty() ) {
         m_filename = fn;
         if(!ui->xbschview->save(fn)) {

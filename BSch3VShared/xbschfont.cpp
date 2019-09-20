@@ -73,7 +73,6 @@ SSize SSmallFont::DrawText(
     bool          bUseUpperLine)
 {
     char buff[1026];
-    bool upperLine = false;
     const char *pch;
     char ch;
     int nStrLen = strlen(str);
@@ -85,7 +84,6 @@ SSize SSmallFont::DrawText(
         for(pch = str,drawStrLen = 0; *pch !='\0' && drawStrLen <nStrLen; pch++, drawStrLen++) {
             ch = *pch;
             if(ch & 0x80) {
-                upperLine = true;
                 ch &= 0x7f;
             }
             if(ch < 0x20 || ch > 0x7e) ch = ' ';

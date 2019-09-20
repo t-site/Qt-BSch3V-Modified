@@ -368,7 +368,7 @@ void SXBSchView::print(QPrinter*  pPrinter)
         paint.save();
 
         paint.setViewTransformEnabled (true);
-        paint.resetMatrix();
+        paint.resetTransform();
 
         SSize size = m_pDoc->SheetSize();
         int w = size.w();
@@ -461,8 +461,6 @@ void SXBSchView::drawBuffer(int x,int y,int clipx,int clipy, int clipw, int clip
     painter.eraseRect(clipx,clipy,clipw,cliph);
 
     //    painter.setClipping(true);
-    clipx -= x;
-    clipy -= y;
     //    painter.setClipRect(clipx,clipy,clipw,cliph);
     SSize size = m_pDoc->SheetSize();
     g_drawFrame(&painter,size,rcClip,QColor("#7E2020"),m_viewScale,m_viewScaleMul);

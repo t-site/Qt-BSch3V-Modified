@@ -288,7 +288,7 @@ bool SPtnObjPolygon::readCe3(SReadCE3& rce3)
 
     node = 0;
     x = 0;
-    y = 0;
+
     prevX = INT_MIN;    //適当な初期値
     prevY = INT_MIN;    //適当な初期値
     string str("");

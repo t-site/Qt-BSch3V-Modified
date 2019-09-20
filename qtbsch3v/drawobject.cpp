@@ -356,7 +356,7 @@ void g_drawTag(QPainter* p,SXBSchObj* pObj,unsigned  nMode,int m_viewScale,int m
     }
     //p->setRasterOp(op);
 
-    int framex,framey,frameh,framew,textx,texty,textw;
+    int framex,framey,frameh,framew,textx,texty;
 
     framex = pTag->x1()*m_viewScaleMul/m_viewScale;
     framey = pTag->y1()*m_viewScaleMul/m_viewScale;
@@ -364,7 +364,6 @@ void g_drawTag(QPainter* p,SXBSchObj* pObj,unsigned  nMode,int m_viewScale,int m
     frameh = 10*m_viewScaleMul/m_viewScale/2;
     framew = pTag->width()*m_viewScaleMul/m_viewScale;
 
-    textw = strlen(pTag->text())*8;
 
     //文字の描画
     if(pTag->horizontal()) {
